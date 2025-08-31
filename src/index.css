@@ -1,0 +1,88 @@
+/* Tailwind entry (v4 style). If you're on v3, replace this single line with:
+   @tailwind base; @tailwind components; @tailwind utilities; */
+   @import "tailwindcss";
+
+   /* ---------- Brand tokens (CSS variables) ---------- */
+   :root{
+     --brand-50:  #e9fbf6;
+     --brand-100: #d5f6ee;
+     --brand-200: #a9eddc;
+     --brand-300: #78e0c7;
+     --brand-400: #3fcbac;
+     --brand-500: #14b89a;  /* primary */
+     --brand-600: #0e8f77;
+     --brand-700: #0b6f5d;
+     --brand-800: #095a4d;
+     --brand-900: #084a40;
+     --carrot:    #f97316;
+   }
+   
+   /* ---------- Brand utility classes (plain CSS; do NOT @apply these) ---------- */
+   @layer utilities {
+     .bg-brand-50  { background-color: var(--brand-50); }
+     .bg-brand-100 { background-color: var(--brand-100); }
+     .bg-brand-200 { background-color: var(--brand-200); }
+     .bg-brand-300 { background-color: var(--brand-300); }
+     .bg-brand-600 { background-color: var(--brand-600); }
+     .bg-brand-700 { background-color: var(--brand-700); }
+     .bg-carrot    { background-color: var(--carrot); }
+   
+     .text-brand-700 { color: var(--brand-700); }
+     .text-brand-900 { color: var(--brand-900); }
+     .text-carrot    { color: var(--carrot); }
+   
+     .border-brand-600 { border-color: var(--brand-600); }
+   }
+   
+   /* ---------- Components (use only built-in utilities in @apply) ---------- */
+   @layer components {
+     .btn-brand {
+       @apply inline-flex items-center rounded-full font-semibold text-white transition;
+       @apply px-4 py-2 text-sm;            /* smaller button */
+       background-color: var(--brand-600);
+     }
+     .btn-brand:hover { background-color: var(--brand-700); }
+   
+     .btn-brand-outline {
+       @apply inline-flex items-center rounded-full font-semibold transition px-5 py-3;
+       color: var(--brand-700);
+       border: 1px solid var(--brand-600);
+       background: transparent;
+     }
+     .btn-brand-outline:hover { background-color: var(--brand-50); }
+   
+     .section { @apply py-14 sm:py-16 lg:py-20; }
+   
+     .section-heading {
+       @apply text-3xl sm:text-4xl font-extrabold text-center;
+       color: var(--brand-900);              /* use CSS var, not @apply */
+     }
+   
+     .card { @apply rounded-xl bg-white ring-1 ring-slate-200 shadow-sm hover:shadow-md transition; }
+   
+     /* No @apply of custom classes here */
+     .icon-badge {
+       @apply h-12 w-12 rounded-full flex items-center justify-center text-2xl;
+       background-color: var(--brand-50);
+       color: var(--brand-700);
+     }
+   
+     .input, .textarea {
+       @apply w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900
+              placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400;
+     }
+     .textarea { @apply min-h-[140px] resize-y; }
+   
+     .footer { @apply border-t border-slate-200 bg-white/70; }
+   }
+   
+   /* Soft hero background */
+   .hero-surface {
+     background:
+       radial-gradient(1200px 600px at 20% -10%, rgba(20,184,154,0.10), transparent 60%),
+       radial-gradient(900px 500px at 110% 10%, rgba(249,115,22,0.10), transparent 60%),
+       #f6fffb;
+   }
+   
+   html { scroll-behavior: smooth; }
+   
