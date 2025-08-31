@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function Navbar() {
           className="shrink-0 flex items-center gap-2 font-semibold text-slate-900"
         >
           <img
-            src="src/assets/logo.png"
+            src={Logo}
             alt="ExpireSense"
             className="w-8 h-8 object-contain"
             loading="eager"
