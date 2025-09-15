@@ -45,7 +45,7 @@ const SparkIcon = (props) => (
 );
 
 export default function About() {
-  const teamNames = ["Kai", "Juji", "Ryuu", "James"];
+  const teamNames = ["Kai", "Juji", "Ryuu", "James", "Sophie"];
 
   const values = [
     {
