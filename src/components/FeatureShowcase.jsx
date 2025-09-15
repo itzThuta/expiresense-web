@@ -7,8 +7,13 @@ import {
   FaBarcode,
   FaClock,
 } from "react-icons/fa";
-import shoppingImg from "../assets/1.png";
-import inventoryImg from "../assets/2.png";
+import { IoSettingsSharp } from "react-icons/io5";
+import shoppingImg from "../assets/2.png";
+import inventoryImg from "../assets/1.png";
+import barcodeImg from "../assets/5.png";
+import smartReceipeImg from "../assets/3.png";
+import plannerImg from "../assets/4.png";
+import expiryImg from "../assets/6.png";
 
 export default function FeatureShowcase() {
   const [active, setActive] = useState("shopping");
@@ -16,17 +21,17 @@ export default function FeatureShowcase() {
   const screens = {
     inventory: inventoryImg,
     shopping: shoppingImg,
-    recipes: "/screens/recipes.png",
-    planner: "/screens/planner.png",
-    barcode: "/screens/barcode.png",
-    expiry: "/screens/expiry.png",
+    recipes: smartReceipeImg,
+    planner: plannerImg,
+    barcode: barcodeImg,
+    expiry: expiryImg,
   };
 
   const features = [
     { key: "inventory", title: "Food Inventory",  desc: "Fridge, Freezer, Pantry.", icon: FaHome },
-    { key: "shopping",  title: "Shopping Lists",  desc: "Plan & move to stock.",    icon: FaShoppingCart },
+    { key: "shopping",  title: "IoT Connection Panel",  desc: "Panel to connet to IoT.",    icon: IoSettingsSharp },
     { key: "recipes",   title: "Smart Recipes",   desc: "Use what you have.",       icon: FaUtensils },
-    { key: "planner",   title: "Meal Planner",    desc: "Sketch your week.",        icon: FaCalendarAlt },
+    { key: "planner",   title: "Meal Planner",    desc: "What you can make with this.",        icon: FaCalendarAlt },
     { key: "barcode",   title: "Receipt/Barcode", desc: "Scan & add fast.",         icon: FaBarcode },
     { key: "expiry",    title: "Expiry Tracking", desc: "Alerts before spoilage.",  icon: FaClock },
   ];
