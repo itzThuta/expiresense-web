@@ -1,10 +1,11 @@
 import About from "./components/About.jsx";
+import Benefits from "./components/Benefits.jsx";
 import Contact from "./components/Contact.jsx";
+import FeatureShowcase from "./components/FeatureShowcase.jsx";
 import Footer from "./components/Footer.jsx";
 import HeroCarousel from "./components/HeroCarousal.jsx";
-import HowItWorks from "./components/HowItWorks.jsx";
 import Navbar from "./components/Navbar";
-
+import Savings from "./components/Savings.jsx";
 
 export default function App() {
   return (
@@ -17,13 +18,34 @@ export default function App() {
       </header>
 
       <main>
-        <section id="how-it-works" className="h-[40vh]"><HowItWorks /></section>
-        {/* <section id="about" className="h-[40vh]"><About /></section> */}
-        <section id="contact" className="h-[30vh]"></section>
+        {/* How it works / Features (no fixed height) */}
+        <section id="how-it-works" className="scroll-mt-20">
+          <FeatureShowcase />
+        </section>
+
+        {/* Benefits — gently pulled up toward Features */}
+        <section className="scroll-mt-20 -mt-4 sm:-mt-6 lg:-mt-8">
+          <Benefits id="benefits" className="pt-6 sm:pt-8 lg:pt-10" />
+        </section>
+
+        {/* Savings calculator */}
+        <section className="scroll-mt-20">
+          <Savings />
+        </section>
+
+        {/* About + Contact */}
+        <section className="scroll-mt-20">
+          <About id="about" />
+        </section>
+
+        <section className="scroll-mt-20">
+          <Contact id="contact" />
+        </section>
       </main>
-      <About id="about" />
-      <Contact id="contact"/>
-      <footer><Footer/></footer>
+
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

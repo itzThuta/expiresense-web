@@ -15,7 +15,7 @@ export default function HowItWorks() {
             How It Works
           </h2>
   
-          {/* Always 3 columns */}
+     
           <div className="mt-10 grid grid-cols-3 gap-3 sm:gap-4 md:gap-6">
             {features.map((item) => {
               const IconEl = item.Icon;
@@ -51,7 +51,6 @@ export default function HowItWorks() {
     );
   }
   
-  /* ---------- Inline SVG icons ---------- */
   function SvgBase({ className, children }) {
     return (
       <svg

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Contact() {
   const [result, setResult] = useState("");
-  const [status, setStatus] = useState(null); // "success" | "error" | null
+  const [status, setStatus] = useState(null); 
   const [loading, setLoading] = useState(false);
 
   async function onSubmit(e) {
@@ -12,7 +12,6 @@ export default function Contact() {
     setStatus(null);
 
     const formData = new FormData(e.target);
-    // TODO: paste your Web3Forms access key below (keep empty for now)
     formData.append("access_key", "");
 
     try {

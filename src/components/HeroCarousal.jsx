@@ -4,7 +4,6 @@ import Logo from "../assets/logo.png";
 function Slide({ title, subtitle }) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-16 py-14 sm:py-16 lg:py-24">
-      {/* IMAGE: first on mobile, second on lg+ */}
       <div className="order-1 lg:order-2 flex items-center justify-center">
         <div className="relative">
           <div className="absolute -inset-6 bg-brand-200 blur-2xl rounded-full opacity-60"></div>
@@ -16,8 +15,6 @@ function Slide({ title, subtitle }) {
           />
         </div>
       </div>
-
-      {/* TEXT: second on mobile, first on lg+ */}
       <div className="order-2 lg:order-1 text-center lg:text-left">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-brand-900">
           {title}
@@ -81,9 +78,7 @@ export default function HeroCarousel() {
       }}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Relative wrapper so arrows can sit outside the slide content */}
         <div className="relative">
-          {/* Slides */}
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-out"
@@ -97,7 +92,6 @@ export default function HeroCarousel() {
             </div>
           </div>
 
-          {/* Controls — pushed farther toward screen edges, hidden on very small screens */}
           <button
             aria-label="Previous slide"
             onClick={prev}
@@ -113,7 +107,7 @@ export default function HeroCarousel() {
             ›
           </button>
 
-          {/* Dots */}
+        
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
             {slides.map((_, i) => (
               <button

@@ -6,12 +6,10 @@ export default function Footer() {
 
   return (
     <footer className="mt-8">
-      {/* subtle gradient divider */}
       <div className="mx-[10%]">
         <div className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
       </div>
 
-      {/* content row */}
       <div className="mx-[10%] py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-slate-600 text-center sm:text-left">
           © {year} <span className="font-semibold text-slate-800">ExpireSense</span>
